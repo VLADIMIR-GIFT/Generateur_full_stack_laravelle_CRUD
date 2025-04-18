@@ -105,7 +105,7 @@ function getInputField(column, modelVar) {
 
 async function generateBladeViews(tableName) {
   const columns = await getTableStructure(tableName);
-  const viewFolder = path.join(__dirname, '..', 'resources', 'views', tableName);
+  const viewFolder = path.join(__dirname, 'resources', 'views', tableName);
   if (!fs.existsSync(viewFolder)) fs.mkdirSync(viewFolder, { recursive: true });
 
   const kebabName = tableName.toLowerCase();

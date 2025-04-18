@@ -51,7 +51,7 @@ async function generateLaravelMigration(tableName) {
   const foreignKeyColumns = foreignKeys.map(fk => fk.column);
 
   const migrationFileName = `${Date.now()}_create_${tableName}_table.php`;
-  const migrationDir = path.join(__dirname, '..', 'database', 'migrations');
+  const migrationDir = path.join(__dirname, 'database', 'migrations');
 
   if (!fs.existsSync(migrationDir)) {
     fs.mkdirSync(migrationDir, { recursive: true });

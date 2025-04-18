@@ -38,7 +38,7 @@ async function generateAllViews() {
   const [tables] = await pool.query("SHOW TABLES");
   const tableNames = tables.map(row => Object.values(row)[0]);
 
-  const outputDir = path.join(__dirname, '..', 'output', 'routes');
+  const outputDir = path.join(__dirname, 'output', 'routes');
   const routesPath = path.join(outputDir, 'web.php');
 
   if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });

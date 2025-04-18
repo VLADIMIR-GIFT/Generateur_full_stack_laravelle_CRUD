@@ -48,7 +48,7 @@ async function generateLaravelController(tableName) {
   const singularName = singularize(tableName);
   const className = toPascalCase(singularName);
   const variableName = toCamelCase(singularName);
-  const controllerFolder = path.join(__dirname, '..', 'app', 'Http', 'Controllers');
+  const controllerFolder = path.join(__dirname,  'app', 'Http', 'Controllers');
   const controllerPath = path.join(controllerFolder, `${className}Controller.php`);
   fs.mkdirSync(path.dirname(controllerPath), { recursive: true });
 
