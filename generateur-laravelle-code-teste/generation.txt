@@ -1,0 +1,9 @@
+node generateAllViews
+
+node generateAllControllers
+
+node generateAllModels
+
+node generateAllRoutes
+
+node generateAllMigrations
